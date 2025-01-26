@@ -38,6 +38,18 @@ p {
     color: #c4bfbf;
 }
 
+/* Odstranění markeru pro konkrétní třídu */
+.no-marker {
+    list-style-type: none; /* Skryje marker */
+    padding-left: 0; /* Zruší odsazení */
+}
+
+/* Pro zajištění normálních markerů u ostatních <li> */
+ul li {
+    list-style-type: disc; /* Typ markeru */
+    padding-left: 20px; /* Přidá odsazení */
+}
+
 /* Hlavní nastavení pro header */
 .header {
     position: relative;
@@ -83,8 +95,8 @@ p {
 /* Styl pro navigační tlačítka */
 .nav-buttons {
     display: flex;
-    gap: 5px; /* Mezera mezi tlačítky */
-    margin-right: 25px;
+    gap: 15px; /* Mezera mezi tlačítky */
+    margin-right: 50px;
 }
 
 .nav-button {
@@ -154,6 +166,15 @@ main {
 /* Sekce */
 section {
     margin-bottom: 20px;
+}
+
+.section-main {
+    display: flex; /* Používáme flexbox pro rozložení */
+    justify-content: space-between; /* Mezi textem a tlačítkem bude co největší prostor */
+    align-items: center; /* Vertikálně centrováno na střed */
+}
+.text-left {
+    max-width: 60%;
 }
 
 section h2 {
@@ -409,17 +430,27 @@ button:hover, a.button:hover {
 }
 
 /* Příklad pro tlačítko s konkrétním stylem */
-.button-menu {
-    background-color: #252525; /* Zelené pozadí */
-    color: white;
-    border-radius: 10px; /* Velmi zaoblené tlačítko */
-    padding: 12px 24px;
-    font-size: 15px;
+.button-main {
+    display: inline-block;
+    background-color: #33333350;
+    color: #e3e3e3;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 50px; /* Zakulacení rohu - čím větší číslo, tím zaoblenější */
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
 }
 
-.button-rounded:hover {
+.button-main:hover {
     background-color: #181818; /* Změní barvu na tmavší při hoveru */
 }
+
+/* Základní nastavení pro sekce s paralaxovým efektem */
+.parralax-section {
+    position: relative;
+  }
 
 /* Sekce s obrázky v pozadí */
 .section-bg {
@@ -462,7 +493,7 @@ button:hover, a.button:hover {
     background-image: url('backround/main_banner.png'); /* Obrázek pro sekci main */
     color: white; /* Barva textu, aby byl dobře viditelný */
     text-align: center;
-    padding: 100px 50px;
+    padding: 70px 50px;
     background-size: cover; /* Přizpůsobení obrázku sekci */
     background-position: center;
     background-repeat: no-repeat;

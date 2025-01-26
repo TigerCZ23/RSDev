@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS:RP Informace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./../res/style.css">
 </head>
 <body>
-    <header>
-        <h1>RS:RP Informace</h1>
-        <nav>
+    <header class="header">
+        <div class="logo">
+            <img src="./../res/image_logo.png" alt="logo" width="50" height="50">
+            <b>
+                <span style="font-size: 25px; font-family: 'Nunito', 'Arial', sans-serif;">RS:RP Reborn</span>
+            </b>
+        </div>
+        <nav class="nav-buttons">
             <ul>
-                <li><a href="./../main/index.html">Domů</a></li>
-                <li><a href="./../rules/index.html">Pravidla</a></li>
-                <li><a href="./../shop/index.html">VIP a Výhody</a></li>
-                <li><a href="index.html" class="active">Informace</a></li>
-                <li><a href="./../AT/index.html">Rozřazení A-Teamu RS:RP</a></li>
+                <li><a class="nav-button" href="./../main/index.html">Home</a></li>
+                <li><a class="nav-button" href="./../rules/index.html">Pravidla</a></li>
+                <li><a class="nav-button" href="./../shop/index.html">VIP a Výhody</a></li>
+                <li><a class="nav-button active" href="index.html">Informace</a></li>
+                <li><a class="nav-button" href="./../AT/index.html">Rozřazení A-Teamu RS:RP</a></li>
             </ul>
         </nav>
     </header>
+    <section class="section-bg section-bg-info1" style="font-family: 'Nunito', 'Arial', sans-serif;">
+        <h1>Informace</h1>
+        <p>Zde najdeš vše potřebné o našem serveru!</p>
+    </section>
 
     <main>
         <section class="info">
@@ -29,10 +39,11 @@
             </p>
 
             <h3>Technické informace</h3>
-            <ul>
-                <li><strong>Platforma:</strong> FiveM</li>
-                <li><strong>Mapa:</strong> Los Santos</li>
-                <li><strong>Minimální věk hráčů:</strong> 15 let</li>
+            <ul style="color: #c4bfbf;">
+                <li><strong>Platforma:</strong> Roblox</li>
+                <li><strong>Hra:</strong> Black Hawk Rescue Mission 5</li>
+                <li><strong>Server kód:</strong> ----</li>
+                <li><strong>Minimální věk hráčů:</strong> 12 let</li>
                 <li><strong>Podpora:</strong> Discord server</li>
             </ul>
 
@@ -40,15 +51,149 @@
             <p>
                 Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte nás kontaktovat prostřednictvím:
             </p>
-            <ul>
-                <li><strong>Email:</strong> support@rs-rp.cz</li>
-                <li><strong>Discord:</strong> discord.gg/rs-rp</li>
+            <ul style="color: #c4bfbf;">
+                <li><strong>Email:</strong> projekt.rsrp@gmail.com</li>
+                <li><strong>Discord:</strong> <a style="color: rgb(100, 100, 255);" href="https://discord.gg/Zrw6rqtzZs">discord.gg/RSRP</a></li>
             </ul>
         </section>
     </main>
 
+    <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-button">
+            Trestní systém
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p style="font-weight: 600;">→ Za svoji frakci zodpovídá vždy vedení frakce a nikdo jiný.</p>
+            <p>
+                → Postup zjišťování informací při porušení pravidel:<br>
+                → člen AT "přichytil" pachatele při činu, dokázal zjistit, kdo to byl a jak se jmenoval<br>
+                (pokud ne → 2.bod)
+            </p>
+            <p>
+                → člen AT pověřen prošetřením dané situace konfrontuje vedení frakce pachatele za účelem zjistit, kdo to byl (popřípadě důvod porušení pravidel atd.)<br>
+                (pokud vedení frakce ví, kdo to byl → 4.bod, pokud ne → 3.bod)
+            </p>
+            <p>
+                → dle závažnosti porušení pravidel → vážné porušení pravidel (vědomé porušení pravidel, má dopad na RP akci,...) = frakční warn (popř. dva frakční warny,...)<br>
+                → triviální porušení pravidel (nevědomé porušení pravidel, nemá dopad na RP akci, celkově není moc závažné) = slovní varování a připomenutí znění pravidel<br>
+                → jde se přímo za pachatelem, kterému jsou předloženy veškeré důkazy, má šanci se obhájit, následně se dle závažnosti porušení pravidel rozhodne o trestu
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">
+            Frakce
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <h4>Jak si vytvořit frakci?</h4>
+            <p>→ k vytvoření frakce je nutné si o ni požádat vytvořením ticketu, kde následně vyplníte požadované informace</p>
+            <p>vytvořením tohoto ticketu:</p>
+            <p>
+                → souhlasíte se všemi pravidly<br>
+                → se vám zakazuje jakkoliv trolit, memeovat nebo nebrat RP frakcí vážně (při vytvoření frakce za účelem toto pravidlo porušit vám je frakce smazána, taktéž si již v budoucnu nebudete moci frakci založit)<br>
+                → jako vedení frakce si berete veškerou odpovědnost za své členy<br>
+                → musíte použít naší šablonu na vytvoření frakčního discordu
+            </p>
+            <h4>podmínky pro vytvoření frakce:</h4>
+            <p>
+                → min. 13 let (fyzicky i mentálně)<br>
+                → mít znalosti o armádě, specializacích, hodnostech a vnitřní infrastruktuře<br>
+                → udržovat vlastní infrastrukturu ve frakci<br>
+                → zaručit dodržování RPení hodností, RP jmen, atd…<br>
+                → průběžně sledovat změny/updaty na webu/discordu RS:RP
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">
+                Ekonomika
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>→ Pokud frakce dosáhne balancu -5 000$, bude automaticky smazána (popř. se to bude řešit s AT)</p>
+                <h4>Armády</h4>
+                <p>
+                    → Role income vedení frakce : 30 000$ <br>
+                    → Každé SSU platí 375$ za 1 člena
+                </p>
+
+                <h4>Milice</h4>
+                <p>
+                    → Role income vedení frakce : 16 500$ <br>
+                    → Každé SSU platí 150$ za 1 člena
+                </p>
+                <h4>Teroristické skupiny</h4>
+                <p>
+                    → Role income vedení frakce : 15 000$ <br>
+                    → Každé SSU platí 100$ za 1 člena
+                </p>
+                <h4>Území</h4>
+                <p>→ Depot, Pushkino, Powerplant, Fort: 500$ (pokud by se na lokaci nenacházela base)</p>
+                <p>
+                    → za vesnici: 1 000$ <br>
+                    → za město: 2 000$ <br>
+                    → querry: 5 oil barelů <br>
+                    → Naval: 4 oil barely <br>
+                </p>
+                <h4>Income z odvozů</h4>
+                <p style="font-weight: 600;">Humanitární pomoc:</p>
+                <p>→ 500$</p>
+                <p style="font-weight: 600;">Armádní mise:</p>
+                <p>→ 1 500$</p>
+                <p style="font-weight: 600;">Pašovací mise:</p>
+                <p>→ 1 000$</p>
+                <p style="font-weight: 600;">Obchodník (prodej/nákup):</p>
+                <p>
+                    → 1 oil barel = 150$/1 000$ <br>
+                    → 1 část vybavení = 1 500$/3 000$
+                </p>
+                </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">
+                Mise
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <h4>Armádní mise</h4>
+                <p>
+                    → jsou pouze pro armády<br>
+                    → abyste získali odměnu, musíte ubránit určenou lokaci<br>
+                </p>
+                <h4>Pašovací mise</h4>
+                <p>
+                    → jsou pouze pro teroristy<br>
+                    → lokace, na které máte misi přivést, se vám náhodně rozdělují<br>
+                    → mohou být dělány max. 1x za SSU<br>
+                    → mise typu: převezte vozidlo z bodu A do bodu B
+                </p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">
+                SSU - Server start up (RP ON)
+                <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+                <p>
+                    → Při startu SSU se vždy hráči napojí ve hře na server a discordových hlasových kanálů IC.<br>
+                    → Hráči jsou rozřazeni podle frakcí do týmů, mohou se spawnovat pouze na FOB, mají zakázáno střílet či nějakým způbobem opustit FOB a čekají na začátek RP.<br>
+                    → Hráčům je zkontrolováno vybavení jejich vedením frakce a poté členy A-T.<br>
+                    → Po začátku RP jsou všichni hráči respawnuti na svou základnu a mohou začít hrát.<br>
+                    → Od doby, co se hráč napojí na herní server, musí dodržovat pravidla.
+                </p>
+            </div>
+        </div>
+      </div>
+
     <footer>
         <p>&copy; 2025 RS:RP. Všechna práva vyhrazena.</p>
     </footer>
+    <script src="./../main/script.js"></script>
+    <script src="./../main/script_odstavce.js"></script>
 </body>
 </html>

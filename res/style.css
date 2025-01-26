@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    color: #bdbdbd;
+    color: #e9e8e8;
     text-align: center;
     font-size: xx-large;
 }
@@ -24,10 +24,18 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    color: #ececec;
+    text-align: left;
+    margin-left: 15px;
+    text-align: left;
+    font-size: larger;
+}
+
 p {
     margin: 0 0 15px;
     text-align: center;
-    color: #928787;
+    color: #c4bfbf;
 }
 
 /* Hlavní nastavení pro header */
@@ -76,6 +84,7 @@ p {
 .nav-buttons {
     display: flex;
     gap: 5px; /* Mezera mezi tlačítky */
+    margin-right: 25px;
 }
 
 .nav-button {
@@ -179,12 +188,88 @@ section h2 {
     color: #555;
 }
 
+.accordion {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    color: #c4bfbf;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #1b1b1b;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex; /* Přidá flexbox pro zarovnání */
+    justify-content: space-between; /* Mezera mezi textem a ikonou */
+    align-items: center; /* Vertikální zarovnání */
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #2c2c2c;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    background-color: #333;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    margin-left: 15px;
+    text-align: left;
+    font-size: 16px;
+    color: #cecece;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 200px; /* Nastavte maximální výšku podle potřeby */
+}
+
+/* Styl pro ikonu plus/mínus */
+.accordion-icon {
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    color: #c4bfbf; /* Barva ikony */
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg); /* Rotace pro změnu z plus na mínus */
+}
+
 /* Pozadí sekce fotek */
 .gallery-section {
-    background: url('background.jpg') no-repeat center center/cover;
+    background: url('backround/backround.png');
+    background-position: center;
+    background-repeat: repeat;
+    max-width: 1250px;
     padding: 50px 20px;
+    margin: 20px auto;
     color: white;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
   
   /* Mřížka pro zarovnání obrázků ve 3 sloupcích */
@@ -349,8 +434,16 @@ button:hover, a.button:hover {
 }
 
 /* Příklad různých obrázků pro konkrétní sekce */
-.section-bg-info {
-    background-image: url('A10_1.png'); /* Obrázek pro sekci "Info" */
+.section-bg-info1 {
+    background-image: url('./../res/backround/A10_2.png'); /* Obrázek pro sekci "Info" */
+    color: white; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 100px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .section-bg-rules {
@@ -366,7 +459,15 @@ button:hover, a.button:hover {
 }
 
 .section-bg-main1 {
-    background-image: url('backround/main_banner.png'); /* Obrázek pro sekci "Store" */
+    background-image: url('backround/main_banner.png'); /* Obrázek pro sekci main */
+    color: white; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 100px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .section-bg-main2 {

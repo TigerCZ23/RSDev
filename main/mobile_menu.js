@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('menu-open');
         if (mobileMenu.classList.contains('menu-open')) {
-            menuToggle.innerHTML = '× Menu';
+            menuToggle.innerHTML = '× MENU';
         } else {
             menuToggle.innerHTML = '☰ MENU';
         }

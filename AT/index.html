@@ -7,15 +7,30 @@
     <link rel="stylesheet" href="./../res/style.css">
 </head>
 <body>
-    <header>
-        <h1>Rozřazení a Tým RS:RP</h1>
-        <nav>
+    <header class="header">
+        <div class="logo">
+            <img src="./../res/image_logo.png" alt="logo" width="50" height="50">
+            <b>
+                <span style="font-size: 25px; font-family: 'Nunito', 'Arial', sans-serif; font-style: italic;">RS:RP Reborn</span>
+            </b>
+        </div>
+        <button class="menu-toggle">☰ MENU</button>
+        <nav class="nav-buttons">
             <ul>
-                <li><a href="./../main/index.html">Domů</a></li>
+                <li class="no-marker"><a class="nav-button" href="./../main/index.html">Home</a></li>
+                <li class="no-marker"><a class="nav-button" href="./../rules/index.html">Pravidla</a></li>
+                <li class="no-marker"><a class="nav-button" href="./../shop/index.html">VIP a Výhody</a></li>
+                <li class="no-marker"><a class="nav-button" href="./../info/index.html">Informace</a></li>
+                <li class="no-marker"><a class="nav-button active" href="index.html">Rozřazení A-Teamu</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="./../main/index.html">Home</a></li>
                 <li><a href="./../rules/index.html">Pravidla</a></li>
                 <li><a href="./../shop/index.html">VIP a Výhody</a></li>
                 <li><a href="./../info/index.html">Informace</a></li>
-                <li><a href="index.html" class="active">Rozřazení A-Teamu RS:RP</a></li>
+                <li><a class="active" href="index.html">Rozřazení A-Teamu</a></li>
             </ul>
         </nav>
     </header>
@@ -56,5 +71,8 @@
     <footer>
         <p>&copy; 2025 RS:RP. Všechna práva vyhrazena.</p>
     </footer>
+    <script src="./../main/paralax_script.js"></script>
+    <script src="./../main/mobile_menu.js"></script>
+    <script src="./../main/script.js"></script>
 </body>
 </html>

@@ -118,6 +118,45 @@ ul li {
     color: rgb(253, 253, 253); /* Barva textu při aktivní */
 }
 
+.menu-toggle {
+    display: none; /* Skryje tlačítko ve výchozím nastavení */
+}
+
+.menu {
+    display: none; /* Skryje menu ve výchozím nastavení */
+    position: absolute;
+    top: 50px; /* Uprav podle velikosti headeru */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .nav-buttons {
+        display: none; /* Skryje původní tlačítka na mobilu */
+    }
+    .menu-toggle {
+        display: block; /* Zobrazí tlačítko na mobilu */
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+    }
+    .menu {
+        display: none; /* Menu zůstane skryté na mobilu do kliknutí na tlačítko */
+        position: absolute;
+        top: 50px; /* Uprav podle velikosti headeru */
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 1000;
+    }
+    .menu-open {
+        display: block; /* Zobrazí menu po kliknutí na tlačítko */
+    }
+}
+
 /* Navigace */
 header {
     background-color: #333;
@@ -450,6 +489,7 @@ button:hover, a.button:hover {
 /* Základní nastavení pro sekce s paralaxovým efektem */
 .parralax-section {
     position: relative;
+    background-attachment: fixed;
   }
 
 /* Sekce s obrázky v pozadí */
@@ -506,7 +546,7 @@ button:hover, a.button:hover {
     color: rgb(214, 212, 212); /* Barva textu, aby byl dobře viditelný */
     text-align: center;
     padding: 50px 20px;
-    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-size: auto; /* Přizpůsobení obrázku sekci */
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -537,3 +577,10 @@ button:hover, a.button:hover {
 .section-bg-store {
     background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
 }
+
+@media (max-width: 768px) {
+    .parralax-section {
+      background-attachment: scroll; /* Vypne paralax efekt na menších zařízeních */
+      background-size: 200%;
+    }
+  }

@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
     menuToggle.addEventListener('click', function() {
-        menu.classList.toggle('menu-open');
+        mobileMenu.classList.toggle('menu-open');
+        if (mobileMenu.classList.contains('menu-open')) {
+            menuToggle.innerHTML = '× Menu';
+        } else {
+            menuToggle.innerHTML = '☰ MENU';
+        }
     });
 });

@@ -1,5 +1,5 @@
 // Najdeme všechny sekce s paralaxovým efektem
-const parallaxSections = document.querySelectorAll('.parralax-section');
+const parallaxSections = document.querySelectorAll('.parallax-section');
 
 // Získáme výšku headeru
 const header = document.querySelector('header'); // Uprav selektor podle toho, jak header definujete
@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
     parallaxSections.forEach((section) => {
         const sectionRect = section.getBoundingClientRect(); // Pozice sekce vůči viewportu
         const offsetStart = parseInt(section.dataset.offset || 50); // Offset od vrchu okna (procento, výchozí hodnota 50)
-        const speed = parseFloat(section.dataset.speed || 0); // Rychlost paralaxy, výchozí 0.5
+        const speed = parseFloat(section.dataset.speed || 0.5); // Rychlost paralaxy, výchozí 0.5
 
         // Výška sekce pro inicializaci paralaxy ve středu obrázku
         const sectionHeight = section.offsetHeight;
@@ -26,9 +26,12 @@ window.addEventListener('scroll', () => {
         // Paralaxový efekt začne, když sekce dosáhne nastaveného bodu
         if (sectionRect.top <= sectionStart && sectionRect.bottom >= 0) {
             // Posun pozadí včetně inicializace středu obrázku
-            const baseOffset = sectionHeight / -6; // Začíná ve středu obrázku
+            const baseOffset = sectionHeight / 2; // Začíná ve středu obrázku
             const scrollOffset = (sectionStart - sectionRect.top) * speed; // Dynamický posun
             section.style.backgroundPositionY = `${baseOffset + scrollOffset}px`;
+        } else {
+            // Reset pozice pozadí, pokud sekce není v zorném poli
+            section.style.backgroundPositionY = `${sectionHeight / 2}px`;
         }
     });
 });

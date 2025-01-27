@@ -480,6 +480,31 @@ footer p {
         padding: 10px;
     }
 }
+/* Kontejner pro sekci */
+.section-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: none;
+    margin: 20px 0;
+}
+
+/* Styl pro text */
+.section-text .text-container .p-main-text {
+    flex: 1;
+    font-size: large;
+    font-weight: 600;
+    text-align: left;
+    color: #c4bfbf;
+    margin: 0 0 15px;
+    margin-right: 25px;
+}
+
+/* Styl pro kontejner tlačítka */
+.section-text .button-container {
+    flex-shrink: 0;
+}
 
 /* Základní styl tlačítek */
 button, a.button {
@@ -500,6 +525,7 @@ button, a.button {
 button:hover, a.button:hover {
     background-color: #858383;
 }
+
 
 /* Příklad pro tlačítko s konkrétním stylem */
 .button-main {
@@ -544,7 +570,7 @@ button:hover, a.button:hover {
     text-align: center;
     padding: 100px 50px;
     background-size: cover; /* Přizpůsobení obrázku sekci */
-    background-position: center;
+    background-position: 0 -100px;
     background-repeat: no-repeat;
     border-radius: 5px;
     margin-bottom: 10px;

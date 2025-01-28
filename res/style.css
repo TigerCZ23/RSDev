@@ -70,6 +70,7 @@ ul li {
 .header.scrolled {
     position: fixed;
     top: 0;
+    transition: top 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -176,20 +177,6 @@ body {
     color: rgb(253, 253, 253);
 }
 
-@media (max-width: 768px) {
-    .nav-buttons {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .mobile-menu.menu-open {
-        display: block;
-    }
-}
-
 /* Navigace */
 header {
     background-color: #333;
@@ -233,6 +220,30 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.li-rules{
+    margin: 0 0 15px;
+    font-size: medium;
+    font-weight: 400;
+    text-align: left;
+    list-style-type: none;
+    color: #c4bfbf;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
 }
 
 /* Sekce */
@@ -402,6 +413,7 @@ section h2 {
   
   .modal-content {
     margin: auto;
+    margin-top: 50px;
     display: block;
     max-width: 90%;
     max-height: 80%;
@@ -434,7 +446,21 @@ section h2 {
   
   .modal .close:hover {
     color: #bbb;
-  }  
+  }
+
+button.prev {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+button.next {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
 /* Tlačítka */
 button, a.button {
@@ -459,7 +485,7 @@ button:hover, a.button:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
+    background-color: #1e1e1e;
     color: #fff;
     margin-top: 20px;
 }
@@ -469,17 +495,6 @@ footer p {
     font-size: 0.9em;
 }
 
-/* Responzivita */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    main {
-        padding: 10px;
-    }
-}
 /* Kontejner pro sekci */
 .section-text {
     display: flex;
@@ -552,18 +567,6 @@ button:hover, a.button:hover {
   }
 
 /* Sekce s obrázky v pozadí */
-.section-bg {
-    color: white; /* Barva textu, aby byl dobře viditelný */
-    text-align: center;
-    padding: 70px 50px;
-    background-size: cover; /* Přizpůsobení obrázku sekci */
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-/* Příklad různých obrázků pro konkrétní sekce */
 .section-bg-info1 {
     background-image: url('./../res/backround/A10_2.png'); /* Obrázek pro sekci "Info" */
     color: white; /* Barva textu, aby byl dobře viditelný */
@@ -576,8 +579,16 @@ button:hover, a.button:hover {
     margin-bottom: 10px;
 }
 
-.section-bg-rules {
-    background-image: url('rules-bg.jpg'); /* Obrázek pro sekci "Pravidla" */
+.section-bg-rules1 {
+    background-image: url('backround/rules1.png'); /* Obrázek pro sekci "Pravidla" */
+    color: white; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 70px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .section-bg-team {
@@ -641,5 +652,42 @@ button:hover, a.button:hover {
     .parralax-section {
       background-attachment: scroll; /* Vypne paralax efekt na menších zařízeních */
       background-size: 200%;
+      background-position: center;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 100%;
+        max-width: 400px; /* Zamezení příliš širokých bloků na mobilu */
+    }
+    .nav-buttons {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .gallery {
+        display: block;
+    }
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    main {
+        padding: 10px;
+    }
+    .mobile-menu.menu-open {
+        display: block;
+    }
+    button.prev {
+        padding: 70px 15px;
+        top: 75%;
+    }
+      
+    button.next {
+        padding: 70px 15px;
+        top: 75%;
     }
   }

@@ -16,12 +16,26 @@ const modalImg = document.getElementById('modalImage');
 const modalCaption = document.querySelector('.modal-caption'); // Nový prvek pro popis obrázku
 const closeModal = document.querySelector('.modal .close');
 
-// Kliknutí na obrázek -> Zobrazí se v modalu
-galleryImages.forEach((img) => {
+let currentIndex = 0; // Uchovává index aktuálně zobrazeného obrázku
+
+// Funkce pro otevření modalu
+function openModal(index) {
+  modal.style.display = 'block';
+  currentIndex = index;
+  updateModalImage();
+}
+
+// Funkce pro aktualizaci obrázku a popisu v modalu
+function updateModalImage() {
+  const currentImage = galleryImages[currentIndex];
+  modalImg.src = currentImage.src;
+  modalCaption.textContent = currentImage.alt; // Aktualizace popisu obrázku
+}
+
+// Přidáme posluchače událostí pro každý obrázek v galerii
+galleryImages.forEach((img, index) => {
   img.addEventListener('click', () => {
-    modal.style.display = 'block';
-    modalImg.src = img.src;
-    modalCaption.textContent = img.alt; // Přidá text z atributu alt
+    openModal(index);
   });
 });
 
@@ -37,3 +51,27 @@ modal.addEventListener('click', (e) => {
   }
 });
 
+// Funkce pro přepnutí na další obrázek
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % galleryImages.length; // Cyklus zpět na začátek
+  updateModalImage();
+}
+
+// Funkce pro přepnutí na předchozí obrázek
+function showPrevImage() {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; // Cyklus na konec
+  updateModalImage();
+}
+
+// Přidání posluchače pro klávesové šipky
+document.addEventListener('keydown', (e) => {
+  if (modal.style.display === 'block') {
+    if (e.key === 'ArrowRight') {
+      showNextImage(); // Šipka doprava
+    } else if (e.key === 'ArrowLeft') {
+      showPrevImage(); // Šipka doleva
+    } else if (e.key === 'Escape') {
+      modal.style.display = 'none'; // Zavření modalu klávesou Escape
+    }
+  }
+});

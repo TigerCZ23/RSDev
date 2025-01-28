@@ -15,7 +15,7 @@ document.querySelectorAll('.accordion-button').forEach((button) => {
         accordionItem.classList.add('active');
         const content = accordionItem.querySelector('.accordion-content');
         content.style.maxHeight = content.scrollHeight + 'px';
-        accordionItem.querySelector('.accordion-icon').textContent = '-'; // Změna na mínus
+        accordionItem.querySelector('.accordion-icon').textContent = '˃'; // Změna na mínus
       }
     });
   });

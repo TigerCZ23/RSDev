@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS:RP Oficiální web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="res/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="res/image_logo.png" alt="logo" width="50" height="50">
+            <b>
+                <span style="font-size: 25px; font-family: 'Nunito', 'Arial', sans-serif; font-style: italic;">RS:RP Reborn</span>
+            </b>
+        </div>
+        <button class="menu-toggle">☰ MENU</button>
+        <nav class="nav-buttons">
+            <ul>
+                <li class="no-marker"><a class="nav-button active" href="main.html">Home</a></li>
+                <li class="no-marker"><a class="nav-button" href="rules/index.html">Pravidla</a></li>
+                <li class="no-marker"><a class="nav-button" href="shop/index.html">VIP a Výhody</a></li>
+                <li class="no-marker"><a class="nav-button" href="info/index.html">Informace</a></li>
+                <li class="no-marker"><a class="nav-button" href="AT/index.html">Rozřazení A-Teamu</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a class="active" href="main.html">Home</a></li>
+                <li><a href="rules/index.html">Pravidla</a></li>
+                <li><a href="shop/index.html">VIP a Výhody</a></li>
+                <li><a href="info/index.html">Informace</a></li>
+                <li><a href="AT/index.html">Rozřazení A-Teamu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="parralax-section section-bg-main1" data-offset="10" style="font-family: 'Nunito', 'Arial', sans-serif;">
+        <h1>RS:RP neboli Ronograd State Military RolePlay</h1>
+        <p>Military RP server ve hře BRM5. <strong>Upozornění: server dočasně pozastaven, více informací na hlavním discordu.</strong></p>
+        <p><a class="button-main" href="#">Discord Server</a></p>
+    </section>
+
+    <main>
+        <section class="section-text">
+            <div class="text-container">
+                <p class="p-main-text">Pokud se k nám chceš přidat, tak si nezapomeň dát také žádost do naší Roblox Group, protože musíme ověřit, že tvůj roblox účet ti opravdu patří.</p>
+                <p class="p-main-text">Zde najdeš také odkaz na hru "Black Hawk Rescue Mission 5", ve které provozujeme náš RP server.</p>
+            </div>
+            <div class="button-container">
+                <p><a class="button" href="#">Roblox Group</a></p>
+                <p><a class="button" href="#">Odkaz na hru</a></p>
+            </div>
+        </section>
+    </main>
+
+    <section class="parralax-section section-bg-main2" data-offset="10">
+        <h2>Náš A-Team</h2>
+        <ul>
+            <li class="no-marker"><strong>Vedení:</strong> Tiger_CZ23</li>
+            <li class="no-marker"><strong>Manažer:</strong> _datsy_</li>
+            <li class="no-marker"><strong>Head Of Staff:</strong> zelenaymoreee</li>
+            <li class="no-marker"><strong>Discord Technik:</strong> death_man</li>
+            <li class="no-marker"><strong>Staff:</strong> tomscz</li>
+            <li class="no-marker"><strong>Administrátoři:</strong> -</li>
+            <li class="no-marker"><strong>Moderátoři:</strong> m_r3k2 | notchiko | czcaptains | zemanov_n | frostty.1_95327</li>
+            <li class="no-marker"><strong>Builder Team:</strong> czcaptains | m_r3k2</li>
+        </ul>
+    </section>
+
+        <section class="gallery-section">
+            <h2>Fotky z našeho serveru</h2>
+            <div class="gallery">
+                <img src="res/images/image1.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image2.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image3.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image4.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image5.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image6.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image7.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image8.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image9.png" alt="popis bude dodán" class="gallery-image">
+                <img src="res/images/image10.png" alt="popis bude dodán" class="gallery-image">
+            </div>
+
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img id="modalImage" class="modal-content">
+                <div class="modal-caption"></div>
+                <button class="prev" onclick="showPrevImage()">&#10094;</button>
+                <button class="next" onclick="showNextImage()">&#10095;</button>
+            </div>
+        </section>
+    <footer>
+        <p>&copy; 2025 RS:RP</p>
+    </footer>
+    <script src="main/script.js"></script>
+    <script src="main/paralax_script.js"></script>
+    <script src="main/mobile_menu.js"></script>
+</body>
+</html>

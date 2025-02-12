@@ -215,11 +215,19 @@ main {
     max-width: 1250px;
     margin: 20px auto;
     background-image: url('backround/backround.png');
-    background-position: center;
+    background-position: auto;
     background-repeat: repeat;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-store {
+    max-width: 1920px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none;
 }
 
 .li-rules{
@@ -625,12 +633,28 @@ button:hover, a.button:hover {
     margin-bottom: 10px;
 }
 
-.section-bg-team {
-    background-image: url('team-bg.jpg'); /* Obrázek pro sekci "Tým" */
+.section-bg-store1 {
+    background-image: url('backround/store1.png'); /* Obrázek pro sekci main */
+    color: black; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 100px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.section-bg-store {
-    background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
+.section-bg-store2 {
+    background-image: url('backround/store2.png'); /* Obrázek pro sekci main */
+    color: white; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 70px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .section-bg-main1 {
@@ -666,20 +690,63 @@ button:hover, a.button:hover {
     background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
 }
 
-.section-bg-store {
-    background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
+.shop-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
 }
 
-.section-bg-store {
-    background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
+.left-side {
+    flex: 1;
+    padding: 20px;
 }
 
-.section-bg-store {
-    background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
+.product {
+    background: rgb(32, 32, 32);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-.section-bg-store {
-    background-image: url('store-bg.jpg'); /* Obrázek pro sekci "Store" */
+.product p {
+    margin: 0 10px 10px;
+    text-align: left;
+}
+
+.product h2 {
+    margin: 0 0 10px;
+}
+
+.product button {
+    background: #808080;
+    color: white;
+    padding: 10px 25px;
+    margin-left: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+}
+
+.product button:hover {
+    background: #3d3d3d;
+}
+
+.right-side {
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {

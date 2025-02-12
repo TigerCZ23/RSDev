@@ -601,6 +601,18 @@ button:hover, a.button:hover {
     margin-bottom: 10px;
 }
 
+.section-bg-rules2 {
+    background-image: url('backround/rules2.png'); /* Obrázek pro sekci "Pravidla" */
+    color: white; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 120px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 .section-bg-team {
     background-image: url('team-bg.jpg'); /* Obrázek pro sekci "Tým" */
 }

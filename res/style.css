@@ -687,7 +687,7 @@ button:hover, a.button:hover {
     color: white; /* Barva textu, aby byl dobře viditelný */
     text-align: center;
     padding: 120px 50px;
-    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 5px;

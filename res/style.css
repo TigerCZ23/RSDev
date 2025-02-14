@@ -28,8 +28,14 @@ h4 {
     color: #ececec;
     text-align: left;
     margin-left: 15px;
-    text-align: left;
     font-size: larger;
+}
+
+h5 {
+    color: #ececec;
+    text-align: left;
+    margin: 10px 15px;
+    font-size: 20px;
 }
 
 p {
@@ -644,9 +650,9 @@ button:hover, a.button:hover {
     background-image: url('backround/rules1.png'); /* Obrázek pro sekci "Pravidla" */
     color: white; /* Barva textu, aby byl dobře viditelný */
     text-align: center;
-    padding: 70px 50px;
+    padding: 90px 50px;
     background-size: cover; /* Přizpůsobení obrázku sekci */
-    background-position: center;
+    background-position: 0 -80px;
     background-repeat: no-repeat;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -666,6 +672,18 @@ button:hover, a.button:hover {
 
 .section-bg-rules3 {
     background-image: url('backround/rules3.png'); /* Obrázek pro sekci "Pravidla" */
+    color: white; /* Barva textu, aby byl dobře viditelný */
+    text-align: center;
+    padding: 120px 50px;
+    background-size: cover; /* Přizpůsobení obrázku sekci */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.section-bg-rules4 {
+    background-image: url('backround/rules4.png'); /* Obrázek pro sekci "Pravidla" */
     color: white; /* Barva textu, aby byl dobře viditelný */
     text-align: center;
     padding: 120px 50px;

@@ -525,18 +525,18 @@ footer p {
     align-items: center;
     padding: 20px;
     background: none;
-    margin-bottom: 0;
+    margin-bottom: 20px 0;
 }
 
 /* Styl pro text */
-.text-container .p-main-text {
+.section-text .text-container .p-main-text {
     flex: 1;
-    font-size: larger;
+    font-size: large;
     font-weight: 600;
     text-align: left;
     color: #c4bfbf;
-    margin: 20px 40px 15px;
-    
+    margin: 0px 0px 15px;
+    margin-right: 25px;
 }
 
 /* Styl pro kontejner tlačítka */
@@ -549,8 +549,8 @@ button, a.button {
     display: inline-block;
     background-color: #f0eeee;
     color: #202020;
-    padding: 12px 40px;
-    margin: 15px 100px;
+    padding: 10px 20px;
+    margin: 10px 0;
     border: none;
     border-radius: 25px; /* Zakulacení rohu - čím větší číslo, tím zaoblenější */
     text-decoration: none;
